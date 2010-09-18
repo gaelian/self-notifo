@@ -7,3 +7,9 @@ require 'spec/autorun'
 Spec::Runner.configure do |config|
   
 end
+
+module Rails
+  def self.root
+    ''
+  end
+end

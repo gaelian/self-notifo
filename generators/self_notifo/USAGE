@@ -1,0 +1,5 @@
+Description:
+    Generates a self-notifo.yml config file in the config directory of your Rails app.
+
+	Example:
+	    `./script/generate self_notifo "NOTIFO_USERNAME" "NOTIFO_API_SECRET" "Name of Your Rails App"`

@@ -5,12 +5,15 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "self-notifo"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Send yourself real-time notifications from your Rails app using Notifo.}
+    gem.description = %Q{The self-notifo gem sends notifications to your own Notifo account from your Rails application.}
     gem.email = "gaelian.ditchburn@gmail.com"
     gem.homepage = "http://github.com/gaelian/self-notifo"
     gem.authors = ["Gaelian Ditchburn"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency('httparty', '>= 0.6.1')
+    gem.add_dependency('rails', '>= 2.3.6')
+    gem.files = Dir["{lib,generators}/**/*"] + %w{ Rakefile self-notifo.gemspec VERSION }
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

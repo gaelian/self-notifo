@@ -1,0 +1,4 @@
+label: <%= actions[1] %>
+auth:
+  username: <%= name %>
+  api_secret: <%= actions[0] %>

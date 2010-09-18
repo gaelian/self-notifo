@@ -1,6 +1,38 @@
 = self-notifo
 
-Description goes here.
+The self-notifo gem allows you to send Notifo (http://notifo.com) notifications to your own Notifo account from your Rails app.
+
+== Installation
+    $ gem install self-notifo
+
+== Usage
+Sign up for a Notifo account (it's free). Take note of your API Username and API Secret (find on your account settings page on the Notifo site)
+
+cd into your Rails app and run:
+
+    ./script/generate self_notifo NOTIFO_USERNAME NOTIFO_API_SECRET "Label Describing Your Application"
+
+This will generate a file called self-notifo.yml in your config directory (you may wish to add this file to .gitignore or equivalent).
+
+When you want to send a notification from your Rails app:
+
+    SelfNotifo(:msg => "My message.")
+
+Optional parameters can be added:
+
+    SelfNotifo.new(:msg => "My message.", :title => "My Notification Title", :uri => "http://some.com")
+
+You can also override the settings in self-notifo.yml:
+
+    SelfNotifo.new(:msg => "My message.", :title => "My Notification Title", :uri => "http://some.com", :label => 'My Label' :username => 'USERNAME', :api_secret => 'API_SECRET')
+
+See https://api.notifo.com/docs/notifications for more info on the Notifo API.
+
+== Dependencies
+
+John Nunemaker's awesome httparty[http://github.com/jnunemaker/httparty].
+
+Ruby on Rails, version 2.3.6 or newer.
 
 == Note on Patches/Pull Requests
  
