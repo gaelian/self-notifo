@@ -36,6 +36,6 @@ class SelfNotifo
 
     def send_notification(params)
       r = self.class.post('https://api.notifo.com/v1/send_notification', { :body => { :msg => params[:msg], :label => params[:label], :title => params[:title], :uri => params[:uri] } })
-      logger.info "[self-notifo] - Sent notification: " + r.parsed_response.inspect
+      logger.info "self-notifo: sent notification, response was: " + r.parsed_response.inspect
     end
 end
