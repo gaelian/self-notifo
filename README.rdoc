@@ -31,9 +31,8 @@ See https://api.notifo.com/docs/notifications for more info on the Notifo API.
 
 == Dependencies
 
-Ruby on Rails, version 2.3.6 or newer.
-
-self-notifo likes to party with John Nunemaker's awesome httparty[http://github.com/jnunemaker/httparty] version 0.6.1 or newer.
+* Ruby on Rails, version 2.3.6 or newer.
+* self-notifo likes to party with John Nunemaker's awesome httparty[http://github.com/jnunemaker/httparty] version 0.6.1 or newer.
 
 == Note on Patches/Pull Requests
  
