@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{self-notifo}
-  s.version = "0.3.0"
+  s.version = "0.4.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gaelian Ditchburn"]
-  s.date = %q{2010-09-19}
+  s.date = %q{2010-09-23}
   s.description = %q{The self-notifo gem sends notifications to your own Notifo account from your Rails application.}
   s.email = %q{gaelian.ditchburn@gmail.com}
   s.extra_rdoc_files = [

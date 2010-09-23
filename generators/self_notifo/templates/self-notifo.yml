@@ -1,3 +1,4 @@
+send_in_test: true
 label: <%= actions[1] %>
 auth:
   username: <%= name %>

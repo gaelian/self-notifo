@@ -10,11 +10,16 @@ class SelfNotifo
   # Optional parameters can be added:
   # SelfNotifo.new(:msg => "My message.", :label => "My Label", :title => "My Title", :uri => "http://some-relevant-address.com")
   # The message label defaults to the value set in self-notifo.yml
+  # If you do not wish for notifications to be sent from your test environment while you run your tests, change the value of 
+  # send_in_test to false in self-notifo.yml.
   def initialize(params)
+    send_in_test = true
+
     begin
       config = YAML.load_file("#{Rails.root}/config/self-notifo.yml")
       username = config['auth']['username']
       api_secret = config['auth']['api_secret']
+      send_in_test = config['send_in_test']
       params[:label] = config['label'] if params[:label].blank?
     rescue Errno::ENOENT
       if params[:username].blank? && params[:api_secret].blank?
@@ -24,8 +29,9 @@ class SelfNotifo
         api_secret = params[:api_secret]
       end
     end
+
     self.class.basic_auth username, api_secret
-    send_notification(params)
+    send_notification(params) if RAILS_ENV != 'test' || (RAILS_ENV == 'test' && send_in_test)
   end
 
   private
