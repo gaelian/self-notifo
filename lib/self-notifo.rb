@@ -31,7 +31,7 @@ class SelfNotifo
     end
 
     self.class.basic_auth username, api_secret
-    send_notification(params) if RAILS_ENV != 'test' || (RAILS_ENV == 'test' && send_in_test)
+    send_notification(params) if Rails.env.test? || (Rails.env.test? && send_in_test)
   end
 
   private

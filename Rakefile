@@ -10,9 +10,9 @@ begin
     gem.email = "gaelian.ditchburn@gmail.com"
     gem.homepage = "http://github.com/gaelian/self-notifo"
     gem.authors = ["Gaelian Ditchburn"]
-    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "rspec", "<= 1.3.1"
     gem.add_dependency('httparty', '>= 0.6.1')
-    gem.add_dependency('rails', '>= 2.3.6')
+    gem.add_dependency('rails', '>= 3.0.0')
     gem.files = Dir["{lib,generators}/**/*"] + %w{ Rakefile self-notifo.gemspec VERSION }
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
