@@ -13,7 +13,7 @@ Download and install one of Notifo's mobile, desktop or other apps from their si
 
 Now cd into your Rails root and run:
 
-    ./script/generate self_notifo NOTIFO_USERNAME NOTIFO_API_SECRET "Label Describing Your Application"
+    rails generate self_notifo NOTIFO_USERNAME NOTIFO_API_SECRET "Label Describing Your Application"
 
 This will generate a file called self-notifo.yml in your config directory (you may wish to add this file to .gitignore or equivalent).
 
@@ -37,7 +37,7 @@ If you don't want to have notifications sent from your test environment while yo
 
 == Dependencies
 
-* Ruby on Rails, version 2.3.6 or newer.
+* Ruby on Rails, version 3.0.0 or newer.
 * self-notifo likes to party with John Nunemaker's fun loving httparty[http://github.com/jnunemaker/httparty] version 0.6.1 or newer.
 
 == Note on Patches/Pull Requests
